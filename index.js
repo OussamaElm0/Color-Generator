@@ -38,7 +38,6 @@ $(document).ready(() => {
     $(".list").append(div);
     $(".list").hide();
     Swal.fire({
-      position: "bottom-right",
       icon: "success",
       title: "The color was added to the list",
       showConfirmButton: false,
