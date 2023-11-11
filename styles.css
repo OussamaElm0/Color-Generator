@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Dancing+Script&family=Ysabeau+Infant:ital,wght@0,500;1,200&family=Ysabeau+Office:ital,wght@0,200;1,200;1,400&display=swap');
+
+:root {
+    --font : 'Belanosima', sans-serif ,'Dancing Script', cursive, 'Ysabeau Infant',  'Ysabeau Office';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+.container {
+    height: 30vh;
+    width: 40vh;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 20px;
+    background-color: #fff;
+ 
+    border: 0px solid #fff;
+}
+.generate-btn,
+.add-to-list {
+    width: fit-content;
+    height: 7vh;
+    align-self: center;
+    margin-top: 10%;
+    border: none;
+    border-radius: 5px;
+    background-color: aqua;
+    font-family: var(--font);
+}
+.color,
+.color-history {
+    width: fit-content;
+    align-self: center;
+    margin-top: 20%;
+    font-family: var(--font)
+}
+.color:hover,
+.add-to-list:hover,
+.color-history:hover {
+    cursor: pointer;
+}
+.add-to-list {
+    display: none;
+    color: #fff;
+    width: 100%;
+    border-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #fff;
+}
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.menu {
+    background: none;
+    border: none;
+}
+.list {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.list-item {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 125%;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10%;
+}
+.color-history {
+    align-self: center;
+    margin: 10px;
+}
