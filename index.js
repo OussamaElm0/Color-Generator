@@ -9,8 +9,20 @@ $(document).ready(() => {
   let letters = ["ABCDEF"];
   let all = [numbers + letters];
   let color = "";
-  let colors = [];
+  let colors = window.localStorage.getItem("colors") || [];
   let isOpen = false;
+
+  if (colors.length > 0) {
+    colors = colors.split(",");
+    colors.forEach(color => {
+      let div = $('<div class="list-item"></div>');
+      let hexaCode = $(`<p class="color-history">${color}</p>`);
+      div.append(hexaCode);
+      div.css("background-color", color);
+      $(".list").append(div);
+      $('.list').hide();
+    });
+  }
 
   $(".generate-btn").click(() => {
     for (let i = 0; i < 6; i++) {
@@ -43,6 +55,8 @@ $(document).ready(() => {
       showConfirmButton: false,
       timer: 1500,
     });
+    colors.push(currentColor);
+    window.localStorage.setItem("colors", colors);
   });
 
   $(".menu").click(() => {
